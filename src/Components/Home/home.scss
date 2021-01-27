@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #eff3f8;
+}
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#sideBar ul {
+  list-style-type: none;
+}
+#sideBar ul li {
+  padding: 16px;
+  line-height: 2;
+  cursor: pointer;
+  border-bottom: 1px dotted #cdcdcd;
+}
+#sideBar ul li:hover {
+  background: linear-gradient(to right, #091ee0 0%, #ffa900 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#sideBar ul li span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+}
+.active {
+  border-right: 3px solid #725980;
+  background: linear-gradient(to right, #091ee0 0%, #ffa900 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#template {
+  margin-top: 30px;
+}
