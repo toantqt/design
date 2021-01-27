@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/design24/static/css/main.2847b865.chunk.css",
-    "main.js": "/design24/static/js/main.992db9c7.chunk.js",
-    "main.js.map": "/design24/static/js/main.992db9c7.chunk.js.map",
+    "main.js": "/design24/static/js/main.0cc38f8b.chunk.js",
+    "main.js.map": "/design24/static/js/main.0cc38f8b.chunk.js.map",
     "runtime-main.js": "/design24/static/js/runtime-main.5d6c4134.js",
     "runtime-main.js.map": "/design24/static/js/runtime-main.5d6c4134.js.map",
     "static/js/2.d2bc635b.chunk.js": "/design24/static/js/2.d2bc635b.chunk.js",
@@ -45,6 +45,6 @@
     "static/js/runtime-main.5d6c4134.js",
     "static/js/2.d2bc635b.chunk.js",
     "static/css/main.2847b865.chunk.css",
-    "static/js/main.992db9c7.chunk.js"
+    "static/js/main.0cc38f8b.chunk.js"
   ]
 }
