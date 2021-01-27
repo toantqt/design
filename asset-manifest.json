@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/design24/static/css/main.2847b865.chunk.css",
-    "main.js": "/design24/static/js/main.250e0676.chunk.js",
-    "main.js.map": "/design24/static/js/main.250e0676.chunk.js.map",
+    "main.js": "/design24/static/js/main.62ba6ceb.chunk.js",
+    "main.js.map": "/design24/static/js/main.62ba6ceb.chunk.js.map",
     "runtime-main.js": "/design24/static/js/runtime-main.5d6c4134.js",
     "runtime-main.js.map": "/design24/static/js/runtime-main.5d6c4134.js.map",
-    "static/js/2.0e1f1698.chunk.js": "/design24/static/js/2.0e1f1698.chunk.js",
-    "static/js/2.0e1f1698.chunk.js.map": "/design24/static/js/2.0e1f1698.chunk.js.map",
+    "static/js/2.d2bc635b.chunk.js": "/design24/static/js/2.d2bc635b.chunk.js",
+    "static/js/2.d2bc635b.chunk.js.map": "/design24/static/js/2.d2bc635b.chunk.js.map",
     "static/js/3.daff7240.chunk.js": "/design24/static/js/3.daff7240.chunk.js",
     "static/js/3.daff7240.chunk.js.map": "/design24/static/js/3.daff7240.chunk.js.map",
     "index.html": "/design24/index.html",
     "static/css/main.2847b865.chunk.css.map": "/design24/static/css/main.2847b865.chunk.css.map",
-    "static/js/2.0e1f1698.chunk.js.LICENSE.txt": "/design24/static/js/2.0e1f1698.chunk.js.LICENSE.txt",
+    "static/js/2.d2bc635b.chunk.js.LICENSE.txt": "/design24/static/js/2.d2bc635b.chunk.js.LICENSE.txt",
     "static/media/e1.b14a9865.jpg": "/design24/static/media/e1.b14a9865.jpg",
     "static/media/e2.63010e2f.jpg": "/design24/static/media/e2.63010e2f.jpg",
     "static/media/e3.3be87e2d.jpg": "/design24/static/media/e3.3be87e2d.jpg",
@@ -43,8 +43,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.5d6c4134.js",
-    "static/js/2.0e1f1698.chunk.js",
+    "static/js/2.d2bc635b.chunk.js",
     "static/css/main.2847b865.chunk.css",
-    "static/js/main.250e0676.chunk.js"
+    "static/js/main.62ba6ceb.chunk.js"
   ]
 }
