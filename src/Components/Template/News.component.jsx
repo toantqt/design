@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import "./template.scss";
 const NewsComponent = () => {
   return (
-    <div className="row">
-      <div className="col-md-4 mt-3">
+    <div className="row mt-3">
+      <div className="col-md-4">
         <Link
           className="box"
           to="/test/https://retnews.netlify.app/homepage-v1.html"
@@ -17,7 +17,7 @@ const NewsComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-3">
+      <div className="col-md-4">
         <Link
           className="box"
           to="/test/http://max-themes.net/demos/akea/?storefront=envato-elements"

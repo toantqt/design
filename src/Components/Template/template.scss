@@ -31,3 +31,10 @@ a:hover {
 .box:hover {
   box-shadow: 0 15px 15px rgba(22, 22, 22, 0.1);
 }
+
+//reponsive
+@media (min-width: 1920px) {
+  #template .box {
+    height: 300px;
+  }
+}

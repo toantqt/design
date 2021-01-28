@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 import "./template.scss";
 const EcommerceComponent = () => {
   return (
-    <div className="row ">
-      <div className="col-md-4 mt-3 ">
+    <div className="row mt-3">
+      <div className="col-md-4  ">
         <Link
           className="box"
           to="/test/http://htmlbeans.com/html/schon/homepage1.html"
@@ -21,7 +21,7 @@ const EcommerceComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-3">
+      <div className="col-md-4 ">
         <Link
           className="box"
           to="/test/http://www.ansonika.com/allaia/index.html"
@@ -32,7 +32,7 @@ const EcommerceComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-3">
+      <div className="col-md-4 ">
         <Link
           className="box"
           to="/test/https://demo.zytheme.com/autoshop/home-1.html"
@@ -43,7 +43,7 @@ const EcommerceComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-5">
+      <div className="col-md-4 mt-4">
         <Link
           className="box"
           to="/test/http://htmlbeans.com/html/Jewelry/home.html"
@@ -54,7 +54,7 @@ const EcommerceComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-5">
+      <div className="col-md-4 mt-4">
         <Link
           className="box"
           to="/test/https://html.rovadex.com/html-creto/index.html"
@@ -65,7 +65,7 @@ const EcommerceComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-5">
+      <div className="col-md-4 mt-4">
         <Link
           className="box"
           to="/test/http://htmlbeans.com/html/botanical/home.html"

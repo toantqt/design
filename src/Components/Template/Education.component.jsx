@@ -7,8 +7,8 @@ import edu3 from "./image/edu3.jpg";
 
 const EducationComponent = () => {
   return (
-    <div className="row">
-      <div className="col-md-4 mt-3">
+    <div className="row mt-3">
+      <div className="col-md-4 ">
         <Link
           className="box"
           to="/test/http://education-html.themerex.net/index.html"
@@ -19,7 +19,7 @@ const EducationComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-3">
+      <div className="col-md-4">
         <Link
           className="box"
           to="/test/http://themesflat.com/html/educate/index.html"
@@ -30,7 +30,7 @@ const EducationComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-3">
+      <div className="col-md-4">
         <Link className="box" to="/test/http://nunforest.com/studiare/">
           <img src={edu3} width="100%" />
           <div className="title-box">

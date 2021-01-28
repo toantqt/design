@@ -11,3 +11,12 @@
   height: 60%;
   line-height: 4;
 }
+
+@media (min-width: 1920px) {
+  #header {
+    height: 90px;
+  }
+  #logo {
+    line-height: 5;
+  }
+}

@@ -10,8 +10,8 @@ import { Link } from "react-router-dom";
 import "./template.scss";
 const FashionComponent = () => {
   return (
-    <div className="row">
-      <div className="col-md-4 mt-3">
+    <div className="row mt-3">
+      <div className="col-md-4">
         <Link
           className="box"
           to="/test/https://demo.hasthemes.com/clothing-preview/clothing/index.html"
@@ -22,7 +22,7 @@ const FashionComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-3">
+      <div className="col-md-4">
         <Link
           className="box"
           to="/test/http://landing.engotheme.com/html/nixx/demo/Home1.html"
@@ -33,7 +33,7 @@ const FashionComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-3">
+      <div className="col-md-4">
         <Link
           className="box"
           to="/test/https://demo.hasthemes.com/clothing-preview/clothing/index.html"
@@ -44,7 +44,7 @@ const FashionComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-5">
+      <div className="col-md-4 mt-4">
         <Link
           className="box"
           to="/test/https://demo.hasthemes.com/zakas-preview/zakas/index.html"
@@ -55,7 +55,7 @@ const FashionComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-5">
+      <div className="col-md-4 mt-4">
         <Link
           className="box"
           to="/test/https://demo.hasthemes.com/stinson-preview/stinson/index.html"
@@ -66,7 +66,7 @@ const FashionComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-5">
+      <div className="col-md-4 mt-4">
         <Link
           className="box"
           to="/test/https://demo.hasthemes.com/kenne-preview/kenne/index-2.html"

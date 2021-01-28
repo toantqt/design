@@ -8,8 +8,8 @@ import spa4 from "./image/spa4.jpg";
 import spa5 from "./image/spa5.jpg";
 const SpaComponent = () => {
   return (
-    <div className="row">
-      <div className="col-md-4 mt-3">
+    <div className="row mt-3">
+      <div className="col-md-4">
         <Link
           className="box"
           to="/test/http://www.websroad.com/lemon/index.html"
@@ -20,7 +20,7 @@ const SpaComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-3">
+      <div className="col-md-4">
         <Link
           className="box"
           to="/test/http://html.cwsthemes.com/relish/index.html"
@@ -31,7 +31,7 @@ const SpaComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-3">
+      <div className="col-md-4">
         <Link
           className="box"
           to="/test/http://preview.hasthemes.com/beautyhouse-preivew/beautyhouse/index.html"
@@ -42,7 +42,7 @@ const SpaComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-5">
+      <div className="col-md-4 mt-4">
         <Link
           className="box"
           to="/test/https://apollotran.com/prestashop/leo_cosmetics/en/"
@@ -53,7 +53,7 @@ const SpaComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-5">
+      <div className="col-md-4 mt-4">
         <Link
           className="box"
           to="/test/http://htmlbeans.com/html/paradise/index.html"

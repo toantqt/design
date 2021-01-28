@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 import "./template.scss";
 const FoodComponent = () => {
   return (
-    <div className="row">
-      <div className="col-md-4 mt-3">
+    <div className="row mt-3">
+      <div className="col-md-4">
         <Link
           className="box"
           to="/test/http://www.themesindustry.com/html/bistro/?storefront=envato-elements"
@@ -20,7 +20,7 @@ const FoodComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-3">
+      <div className="col-md-4">
         <Link
           className="box"
           to="/test/http://landing.engocreative.com/html/freshfood/demo/home_v1.html"
@@ -31,7 +31,7 @@ const FoodComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-3">
+      <div className="col-md-4">
         <Link
           className="box"
           to="/test/http://codenpixel.com/demo/foodpicky/index.html"
@@ -42,7 +42,7 @@ const FoodComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-5">
+      <div className="col-md-4 mt-4">
         <Link
           className="box"
           to="/test/https://wedesignthemes.com/html/restaurant/bar/index.html"
@@ -53,7 +53,7 @@ const FoodComponent = () => {
           </div>
         </Link>
       </div>
-      <div className="col-md-4 mt-5">
+      <div className="col-md-4 mt-4">
         <Link
           className="box"
           to="/test/https://htmldemo.hasthemes.com/obrien-preview/obrien/index.html"

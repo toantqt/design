@@ -17,7 +17,7 @@ const HomeComponent = () => {
   return (
     <div>
       <HeaderComponent />
-      <div className="row wrapper mt-5">
+      <div className="row wrapper mt-4">
         <div className="col-md-3" id="sideBar">
           <ul>
             <li
