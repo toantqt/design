@@ -2,7 +2,7 @@
   "name": "design24",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://toantqt.github.io/design24",
+  "homepage": "https://toantqt.github.io/design",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
