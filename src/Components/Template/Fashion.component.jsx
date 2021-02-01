@@ -1,84 +1,40 @@
-import React from "react";
-import fashion1 from "./image/fashion1.jpg";
-import fashion2 from "./image/fashion2.jpg";
-import fashion3 from "./image/fashion3.jpg";
-import fashion4 from "./image/fashion4.jpg";
-import fashion5 from "./image/fashion5.jpg";
-import fashion6 from "./image/fashion6.jpg";
-
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import db from "../../firebase";
 import "./template.scss";
 const FashionComponent = () => {
-  return (
-    <div className="row mt-3">
-      <div className="col-md-4">
-        <Link
-          className="box"
-          to="/test/https://demo.hasthemes.com/clothing-preview/clothing/index.html"
-        >
-          <img src={fashion1} width="100%" />
+  const [lists, setLists] = useState([]);
+  useEffect(() => {
+    db.collection("list")
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          if (doc.data().type === "fashion") {
+            setLists((lists) => [
+              ...lists,
+              {
+                name: doc.data().name,
+                link: doc.data().link,
+                image: doc.data().image,
+              },
+            ]);
+          }
+        });
+      });
+  }, []);
+  const list = lists.map((e, index) => {
+    return (
+      <div className="col-md-4 mt-3" key={index}>
+        <Link className="box" to={`/test/${e.link}`}>
+          <img src={e.image} width="100%" />
           <div className="title-box">
-            <span>Clothing</span>
+            <span>{e.name}</span>
           </div>
         </Link>
       </div>
-      <div className="col-md-4">
-        <Link
-          className="box"
-          to="/test/http://landing.engotheme.com/html/nixx/demo/Home1.html"
-        >
-          <img src={fashion2} width="100%" />
-          <div className="title-box">
-            <span>NIXX</span>
-          </div>
-        </Link>
-      </div>
-      <div className="col-md-4">
-        <Link
-          className="box"
-          to="/test/https://demo.hasthemes.com/clothing-preview/clothing/index.html"
-        >
-          <img src={fashion3} width="100%" />
-          <div className="title-box">
-            <span>80's Vintage</span>
-          </div>
-        </Link>
-      </div>
-      <div className="col-md-4 mt-4">
-        <Link
-          className="box"
-          to="/test/https://demo.hasthemes.com/zakas-preview/zakas/index.html"
-        >
-          <img src={fashion4} width="100%" />
-          <div className="title-box">
-            <span>Zakas</span>
-          </div>
-        </Link>
-      </div>
-      <div className="col-md-4 mt-4">
-        <Link
-          className="box"
-          to="/test/https://demo.hasthemes.com/stinson-preview/stinson/index.html"
-        >
-          <img src={fashion5} width="100%" />
-          <div className="title-box">
-            <span>Fashion</span>
-          </div>
-        </Link>
-      </div>
-      <div className="col-md-4 mt-4">
-        <Link
-          className="box"
-          to="/test/https://demo.hasthemes.com/kenne-preview/kenne/index-2.html"
-        >
-          <img src={fashion6} width="100%" />
-          <div className="title-box">
-            <span>Kenne</span>
-          </div>
-        </Link>
-      </div>
-    </div>
-  );
+    );
+  });
+  return <div className="row mt-3">{list}</div>;
 };
 
 export default FashionComponent;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HeaderComponent from "../Header/Header.component";
 import EcommerceComponent from "../Template/Ecommerce.component";
 import FashionComponent from "../Template/Fashion.component";
@@ -13,7 +13,6 @@ const HomeComponent = () => {
   const handleClickSelect = (event, status) => {
     setSelected(status);
   };
-
   return (
     <div>
       <HeaderComponent />

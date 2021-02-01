@@ -1,45 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./template.scss";
-import edu1 from "./image/edu1.jpg";
-import edu2 from "./image/edu2.jpg";
-import edu3 from "./image/edu3.jpg";
-
+import db from "../../firebase";
 const EducationComponent = () => {
-  return (
-    <div className="row mt-3">
-      <div className="col-md-4 ">
-        <Link
-          className="box"
-          to="/test/http://education-html.themerex.net/index.html"
-        >
-          <img src={edu1} width="100%" />
+  const [lists, setLists] = useState([]);
+  useEffect(() => {
+    db.collection("list")
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          if (doc.data().type === "education") {
+            setLists((lists) => [
+              ...lists,
+              {
+                name: doc.data().name,
+                link: doc.data().link,
+                image: doc.data().image,
+              },
+            ]);
+          }
+        });
+      });
+  }, []);
+  const list = lists.map((e, index) => {
+    return (
+      <div className="col-md-4 mt-3" key={index}>
+        <Link className="box" to={`/test/${e.link}`}>
+          <img src={e.image} width="100%" />
           <div className="title-box">
-            <span>Education Center</span>
+            <span>{e.name}</span>
           </div>
         </Link>
       </div>
-      <div className="col-md-4">
-        <Link
-          className="box"
-          to="/test/http://themesflat.com/html/educate/index.html"
-        >
-          <img src={edu2} width="100%" />
-          <div className="title-box">
-            <span>Educate </span>
-          </div>
-        </Link>
-      </div>
-      <div className="col-md-4">
-        <Link className="box" to="/test/http://nunforest.com/studiare/">
-          <img src={edu3} width="100%" />
-          <div className="title-box">
-            <span>Studiare</span>
-          </div>
-        </Link>
-      </div>
-    </div>
-  );
+    );
+  });
+  return <div className="row mt-3">{list}</div>;
 };
 
 export default EducationComponent;
