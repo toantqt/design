@@ -27,7 +27,6 @@ const AdminComponent = (props) => {
       .add(values)
       .then(function (docRef) {
         alert("success");
-        console.log("Document written with ID: ", docRef.id);
       })
       .catch(function (error) {
         console.error("Error adding document: ", error);
@@ -57,7 +56,7 @@ const AdminComponent = (props) => {
 
   const list = lists.map((e, index) => {
     return (
-      <tr>
+      <tr key={index}>
         <td>
           <img src={e.image} width="140px" height="100px" />
         </td>
@@ -71,8 +70,8 @@ const AdminComponent = (props) => {
           <p>{e.link}</p>
         </td>
         <td>
-          <i class="far fa-edit btn"></i>
-          <i class="far fa-trash-alt btn"></i>
+          <i className="far fa-edit btn"></i>
+          <i className="far fa-trash-alt btn"></i>
         </td>
       </tr>
     );
