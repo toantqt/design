@@ -2,7 +2,7 @@ import React from "react";
 import { Route, HashRouter } from "react-router-dom";
 import HomeComponent from "./Components/Home/Home.component";
 import PreviewComponent from "./Components/Preview/Preview.component";
-import AdminComponent from "./Components/Template/Admin.component";
+import AdminComponent from "./Components/Admin/Admin.component";
 function App() {
   return (
     <HashRouter>
