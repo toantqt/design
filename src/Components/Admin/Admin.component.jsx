@@ -81,8 +81,6 @@ const AdminComponent = (props) => {
       .get()
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-          console.log(doc);
-
           setLists((lists) => [
             ...lists,
             {
