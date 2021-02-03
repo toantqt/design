@@ -12,6 +12,7 @@ const AdminComponent = (props) => {
 
   var [values, setValues] = useState(initialFieldValues);
   const [lists, setLists] = useState([]);
+  const [edit, setEdit] = useState(false);
 
   const handleInputChange = (e) => {
     var { name, value } = e.target;
@@ -23,10 +24,52 @@ const AdminComponent = (props) => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    if (edit) {
+      db.collection("list")
+        .doc(values.id)
+        .update({
+          image: values.image,
+          link: values.link,
+          type: values.type,
+          name: values.name,
+        })
+        .then(function (docRef) {
+          alert("Edit success");
+        })
+        .catch(function (error) {
+          console.error("Error adding document: ", error);
+        });
+    } else {
+      db.collection("list")
+        .add(values)
+        .then(function (docRef) {
+          alert("Add success");
+        })
+        .catch(function (error) {
+          console.error("Error adding document: ", error);
+        });
+    }
+  };
+
+  const handleClickSelect = (event, data) => {
+    event.preventDefault();
+    setEdit(true);
+    setValues({
+      id: data.id,
+      image: data.image,
+      link: data.link,
+      name: data.name,
+      type: data.type,
+    });
+  };
+
+  const handleClickDelete = (event, data) => {
+    event.preventDefault();
     db.collection("list")
-      .add(values)
+      .doc(data.id)
+      .delete()
       .then(function (docRef) {
-        alert("success");
+        alert("Delete success");
       })
       .catch(function (error) {
         console.error("Error adding document: ", error);
@@ -70,8 +113,18 @@ const AdminComponent = (props) => {
           <p>{e.link}</p>
         </td>
         <td>
-          <i className="far fa-edit btn"></i>
-          <i className="far fa-trash-alt btn"></i>
+          <i
+            className="far fa-edit btn"
+            onClick={(event) => {
+              handleClickSelect(event, e);
+            }}
+          ></i>
+          <i
+            className="far fa-trash-alt btn"
+            onClick={(event) => {
+              handleClickDelete(event, e);
+            }}
+          ></i>
         </td>
       </tr>
     );
@@ -85,37 +138,39 @@ const AdminComponent = (props) => {
             <div className="form-group input-group">
               <div className="input-group-prepend">
                 <div className="input-group-text">
-                  <i className="fas fa-user"></i>
+                  <i class="fas fa-link"></i>
                 </div>
               </div>
               <input
                 type="text"
                 className="form-control"
-                placeholder="image"
-                name="image"
+                placeholder="link"
+                name="link"
                 onChange={handleInputChange}
+                value={values.link}
               />
             </div>
             <div className="form-row">
               <div className="form-group input-group col-md-6">
                 <div className="input-group-prepend">
                   <div className="input-group-text">
-                    <i className="fas fa-mobile-alt"></i>
+                    <i class="far fa-image"></i>
                   </div>
                 </div>
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="link"
-                  name="link"
+                  placeholder="image"
+                  name="image"
                   onChange={handleInputChange}
+                  value={values.image}
                 />
               </div>
 
               <div className="form-group input-group col-md-6">
                 <div className="input-group-prepend">
                   <div className="input-group-text">
-                    <i className="fas fa-envelope"></i>
+                    <i class="fas fa-signature"></i>
                   </div>
                 </div>
                 <input
@@ -124,6 +179,7 @@ const AdminComponent = (props) => {
                   placeholder="name"
                   name="name"
                   onChange={handleInputChange}
+                  value={values.name}
                 />
               </div>
             </div>
@@ -133,6 +189,7 @@ const AdminComponent = (props) => {
                 placeholder="Type"
                 name="type"
                 onChange={handleInputChange}
+                value={values.type}
               ></textarea>
             </div>
             <div className="form-contrl">
