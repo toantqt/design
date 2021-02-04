@@ -26,7 +26,7 @@ const FashionComponent = () => {
     return (
       <div className="col-md-4 mt-3" key={index}>
         <Link className="box" to={`/test/${e.link}`}>
-          <img src={e.image} width="100%" />
+          <img src={e.image} width="100%" alt="" />
           <div className="title-box">
             <span>{e.name}</span>
           </div>

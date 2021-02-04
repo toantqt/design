@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import HeaderComponent from "../Header/Header.component";
 import EcommerceComponent from "../Template/Ecommerce.component";
 import FashionComponent from "../Template/Fashion.component";
@@ -11,6 +11,7 @@ import EducationComponent from "../Template/Education.component";
 const HomeComponent = () => {
   const [selected, setSelected] = useState(1);
   const handleClickSelect = (event, status) => {
+    event.preventDefault();
     setSelected(status);
   };
   return (
