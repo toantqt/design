@@ -130,6 +130,7 @@ const AdminComponent = (props) => {
   return (
     <div>
       <HeaderComponent />
+      hihi
       <div className="row mt-5" style={{ width: "90%", margin: "0 auto" }}>
         <div className="col-4">
           <form onSubmit={handleFormSubmit}>
