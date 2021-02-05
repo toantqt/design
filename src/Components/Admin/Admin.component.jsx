@@ -130,14 +130,13 @@ const AdminComponent = (props) => {
   return (
     <div>
       <HeaderComponent />
-      hihi
       <div className="row mt-5" style={{ width: "90%", margin: "0 auto" }}>
         <div className="col-4">
           <form onSubmit={handleFormSubmit}>
             <div className="form-group input-group">
               <div className="input-group-prepend">
                 <div className="input-group-text">
-                  <i class="fas fa-link"></i>
+                  <i className="fas fa-link"></i>
                 </div>
               </div>
               <input
@@ -153,7 +152,7 @@ const AdminComponent = (props) => {
               <div className="form-group input-group col-md-6">
                 <div className="input-group-prepend">
                   <div className="input-group-text">
-                    <i class="far fa-image"></i>
+                    <i className="far fa-image"></i>
                   </div>
                 </div>
                 <input
@@ -169,7 +168,7 @@ const AdminComponent = (props) => {
               <div className="form-group input-group col-md-6">
                 <div className="input-group-prepend">
                   <div className="input-group-text">
-                    <i class="fas fa-signature"></i>
+                    <i className="fas fa-signature"></i>
                   </div>
                 </div>
                 <input
@@ -201,7 +200,7 @@ const AdminComponent = (props) => {
           </form>
         </div>
         <div className="col-8 ">
-          <table class="table table-bordered">
+          <table className="table table-bordered">
             <thead>
               <tr>
                 <th scope="col">Image</th>
