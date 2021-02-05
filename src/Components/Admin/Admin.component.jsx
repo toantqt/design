@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import db from "../../firebase";
 import HeaderComponent from "../Header/Header.component";
 import "./Admin.scss";
-const AdminComponent = (props) => {
+const AdminComponent = () => {
   const initialFieldValues = {
     image: "",
     link: "",
